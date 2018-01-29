@@ -25,7 +25,7 @@ config.mongodb.connection = () => {
 
 config.proxy = {};
 config.proxy.url = "http://p017395:godofw@r20@10.10.190.25:3128";
-config.proxy.enabled = true;
+config.proxy.enabled = false;
 
 config.web = {};
 config.web.port = 3000;
