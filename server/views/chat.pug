@@ -1,0 +1,32 @@
+﻿extends layout
+
+block content
+  header
+    div(class="row")
+      div(class="col s3 m6 l6")
+        img(src="/img/logo.png", class="left responsive-img")
+      div(class="col s9 m6 l6")
+        span(class="right")
+          a(href="/", target="_self", class="encerrar") Encerrar atendimento
+  main(role="main", id="chat", ng-init="load()")
+    div(id="ancora")
+  footer
+    input(id="contexto", type="hidden")
+    div(class="NavegacaoAncora")
+      a(href="#ancora", id="btnFade", class="scroll right btnScroll")
+    form(class="campoMensagem")
+      div(class="row labelMensagem")
+        div(class="col s12")
+          label(for="digiteTexto") Digite sua mensagem...
+      div(class="row")
+        div(class="input-field col s8 m10 l11")
+          input(id="digiteTexto", type="text", class="validate")
+        div(class="input-field col s4 m2 l1 right-align")
+          button(class="btn waves-effect waves-light", type="submit", ng-click="Enviar()") Enviar
+                    
+block javascript
+  script(type="text/javascript", language="JavaScript", src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js")
+  script(type="text/javascript", language="JavaScript", src="https://code.jquery.com/jquery-3.2.1.min.js")
+  script(type="text/javascript", language="JavaScript", src="/javascripts/chatApp.js")
+  script(type="text/javascript", language="JavaScript", src="/javascripts/materialize.js")
+  script(type="text/javascript", language="JavaScript", src="/javascripts/funcoes.js")

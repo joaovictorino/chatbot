@@ -1,0 +1,3 @@
+C:\TFSPRODAM\IT0103_BotDescomplica\Devs\Pack0001\BotNode\obj\Debug\BotNode.njsprojResolveAssemblyReference.cache
+C:\TFSPRODAM\IT0103_BotDescomplica\Devs\Pack0001\BotNode\obj\Debug\BotNode.njsproj.CoreCompileInputs.cache
+C:\TFSPRODAM\IT0103_BotDescomplica\Devs\Pack0001\BotNode\bin\Microsoft.NodejsTools.WebRole.dll
