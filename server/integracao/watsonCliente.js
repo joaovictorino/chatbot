@@ -1,12 +1,7 @@
 'use strict';
 
-var express = require('express');
 var DB = require('../dados/db');
 var config = require('../../config');
-
-var router = express.Router();
-
-process.env.http_proxy = config.proxy;
 
 var watsonIBM = require('watson-developer-cloud');
 
@@ -17,13 +12,14 @@ var conversation = new watsonIBM.ConversationV1({
 });
 
 function watsonCliente() { 
-    if (config.proxy.enabled) {
-        process.env.http_proxy = config.proxy.url;
-    }
 }
 
 watsonCliente.prototype.conversar = function (contexto, mensagem) {
     return new Promise((resolve, reject) => {
+        if (config.proxy.enabled) {
+            process.env.http_proxy = config.proxy.url;
+        };
+        
         if(contexto == null && mensagem == null){
             conversation.message(
                 {

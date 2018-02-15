@@ -248,6 +248,25 @@ table.striped > tbody > tr:nth-child(even) {
 }
 */
 
+.btnConfirmar{
+    background-color: #2196f3;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 1rem;
+    z-index: 0;
+    margin: 4px 0px;
+}
+
+.btnConfirmar:hover{
+    background-color: #218add;
+}
+
+.btnConfirmar:active, .btnConfirmar:focus{
+    background-color: #1f6ba7;
+}
+
 .multipleOptions table th {
     text-transform: uppercase;
 }

@@ -44,6 +44,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="server\integracao\iptuHATS.js" />
+    <Compile Include="server\integracao\iptuSegundaVia.js" />
     <Compile Include="server\integracao\iptuSOA.js" />
     <Compile Include="server\integracao\watsonCliente.js" />
     <Compile Include="server\routes\chat.js">
@@ -56,6 +57,7 @@
     <Compile Include="test\iptuhatstest.js" />
     <Compile Include="test\iptusoatest.js" />
     <Content Include=".vscode\launch.json" />
+    <Content Include="client\boleto\iptusimp.pdf" />
     <Content Include="client\fonts\roboto\Roboto-Bold.eot" />
     <Content Include="client\fonts\roboto\Roboto-Bold.ttf" />
     <Content Include="client\fonts\roboto\Roboto-Bold.woff" />
@@ -103,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vscode\" />
+    <Folder Include="client\boleto\" />
     <Folder Include="client\fonts\" />
     <Folder Include="client\fonts\roboto\" />
     <Folder Include="client\img\" />

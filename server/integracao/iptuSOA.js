@@ -76,7 +76,7 @@ IPTUSOA.prototype.consultarSQLPorCEPNumero = function (cep, numero, complemento)
                         tipoRua: item["not:codTipoLogradouro"][0],
                         rua: item["not:nomLogradouro"][0],
                         numero: item["not:numImovel"][0],
-                        complemento: item["not:txtComplementoImovel"][0],
+                        complemento: item["not:txtComplementoImovel"] != undefined ? item["not:txtComplementoImovel"][0] : "",
                         sql: item["not:numSQL"][0]
                     });
             });
@@ -174,7 +174,7 @@ IPTUSOA.prototype.consultarSQLPorLogradouroNumero = function (logradouro, numero
                         tipoRua: item["not:codTipoLogradouro"][0],
                         rua: item["not:nomLogradouro"][0],
                         numero: item["not:numImovel"][0],
-                        complemento: item["not:txtComplementoImovel"][0],
+                        complemento: item["not:txtComplementoImovel"] != undefined ? item["not:txtComplementoImovel"][0] : "",
                         sql: item["not:numSQL"][0]
                     });
             });

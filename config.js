@@ -15,19 +15,20 @@ config.IPTUHATS = {};
 config.IPTUHATS.url = "http://10.10.67.177/SF5106_HATS_IPTU_WS/IPTUService/WEB-INF/wsdl/IPTUService.wsdl";
 
 config.mongodb = {};
-config.mongodb.username = "user_PRODAM";
-config.mongodb.password = "PRODAM";
+config.mongodb.username = "user_IT0103";
+config.mongodb.password = "pwd_IT0103";
 config.mongodb.host = "d72v20i";
 config.mongodb.port = "27017";
+config.mongodb.database = "it0103";
 config.mongodb.connection = () => {
     return "mongodb://" + config.mongodb.username + ":" + config.mongodb.password + "@" + config.mongodb.host + ":" + config.mongodb.port;
 };
 
 config.proxy = {};
-config.proxy.url = "http://p017395:godofw@r20@10.10.190.25:3128";
-config.proxy.enabled = false;
+config.proxy.url = "http://p017395:godofw@r21@10.10.190.25:3128";
+config.proxy.enabled = true;
 
 config.web = {};
-config.web.port = 80;
+config.web.port = 3000;
 
 module.exports = config;

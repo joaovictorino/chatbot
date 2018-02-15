@@ -1,11 +1,12 @@
 ﻿var MongoClient = require('mongodb').MongoClient;
+var config = require('../../config');
 
 function DB() { }
 
 DB.prototype.salvarOla = function (url, id, mensagem) {
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        var dbo = db.db("PRODAM");
+        var dbo = db.db(config.mongodb.database);
         var time = new Date();
         var myobj = { _id: id, data: time, interacoes: [{ mensagem: mensagem, data: time }] };
         dbo.collection("conversations").insertOne(myobj, function (err, res) {
@@ -18,7 +19,7 @@ DB.prototype.salvarOla = function (url, id, mensagem) {
 DB.prototype.salvarConversa = function (url, id, mensagem, intencoes, dataHora) {
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        var dbo = db.db("PRODAM");
+        var dbo = db.db(config.mongodb.database);
         var myobj = { _id: id };
         dbo.collection("conversations").findOne(myobj, function (err, res) {
             if (err) throw err;
