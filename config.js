@@ -1,9 +1,9 @@
 var config = {};
 
 config.watson = {};
-config.watson.username = '6d5a96e0-4fdf-4246-8cd7-45c5f1456347';
-config.watson.password = '1BX6I0yAMvYQ';
-config.watson.workspaceId = '030428d7-a6e6-4fae-9e31-34263d2d3254';
+config.watson.username = '5a041c56-b59d-4072-b233-90f7a4267000';
+config.watson.password = 'lip_zEC9keWaYbeojvBhfeIe-Z6poi05KUsg_NvJ3_Xc';
+config.watson.workspaceId = '06971442-8e35-4dce-8331-415499147ca0';
 
 config.IPTUSOA = {};
 config.IPTUSOA.host = 'osb.pp9802.prodam';
@@ -15,18 +15,16 @@ config.IPTUHATS = {};
 config.IPTUHATS.url = "http://10.10.67.177/SF5106_HATS_IPTU_WS/IPTUService/WEB-INF/wsdl/IPTUService.wsdl";
 
 config.mongodb = {};
-config.mongodb.username = "user_IT0103";
-config.mongodb.password = "pwd_IT0103";
-config.mongodb.host = "d72v20i";
+config.mongodb.host = "localhost";
 config.mongodb.port = "27017";
 config.mongodb.database = "it0103";
 config.mongodb.connection = () => {
-    return "mongodb://" + config.mongodb.username + ":" + config.mongodb.password + "@" + config.mongodb.host + ":" + config.mongodb.port;
+    return "mongodb://" + config.mongodb.host + ":" + config.mongodb.port;
 };
 
 config.proxy = {};
-config.proxy.url = "http://p017395:godofw@r21@10.10.190.25:3128";
-config.proxy.enabled = true;
+config.proxy.url = "http://p017395:godofw@r27@10.10.190.25:3128";
+config.proxy.enabled = false;
 
 config.web = {};
 config.web.port = 3000;
